@@ -26,8 +26,8 @@
       <nav class="navbar">
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
-        <a href="#services">Skills</a>
-        <a href="#portfolio">Project</a>
+        <a href="#skills">Skills</a>
+        <a href="#project">Project</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -65,6 +65,7 @@
         <h3>Full-Stack Developer!</h3>
         <p>
           {% if about_content %}{{ about_content.initial_paragraph|linebreaksbr }}{% else %}I’m a self-taught web developer passionate about building and deploying real-world web applications. I specialize in full-stack development with a strong focus on backend logic and clean, user-friendly interfaces. I often work on projects that include user authentication and dynamic features.{% endif %}
+          <br><br>
           <span id="moreAboutText" style="display: none;">
             {% if about_content %}{{ about_content.read_more_paragraph|linebreaksbr }}{% else %}I am focused on improving my skills every day by learning new technologies and building useful tools. I enjoy solving problems with code and aim to deliver efficient, scalable, and user-friendly solutions. I'm excited to contribute to meaningful projects and grow alongside a passionate team.{% endif %}
           </span>
@@ -73,7 +74,7 @@
       </div>
     </section>
 
-    <section class="services" id="services">
+    <section class="services" id="skills">
       <h2 class="heading">My <span>Skills</span></h2>
       <div class="services-container">
         {% for category in skill_categories %}
@@ -91,7 +92,7 @@
       </div>
     </section>
 
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio" id="project">
       <h2 class="heading">My <span>Projects</span></h2> {# Changed heading to "My Projects" #}
       <div class="portfolio-container">
         {% for project in projects %}
