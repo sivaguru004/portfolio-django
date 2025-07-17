@@ -42,5 +42,9 @@ def contact_form_submit(request):
                 message=message
             )
             messages.success(request, 'Your message has been sent successfully!')
+            return redirect('contact')
         else:
             messages.error(request, 'Please fill in all required fields (Full Name, Email Address, and Your Message).')
+            return redirect('contact')
+    else:
+        return redirect('contact')
