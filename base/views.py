@@ -42,9 +42,9 @@ def contact_form_submit(request):
                 message=message
             )
             messages.success(request, 'Your message has been sent successfully!')
-            return redirect('contact')
+            return redirect('/#contact') # Redirect to the home page with the #contact fragment
         else:
             messages.error(request, 'Please fill in all required fields (Full Name, Email Address, and Your Message).')
-            return redirect('contact')
+            return redirect('/#contact') # Redirect with error message
     else:
-        return redirect('contact')
+        return redirect('/#contact') 
